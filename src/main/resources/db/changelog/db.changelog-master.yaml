@@ -1,0 +1,39 @@
+databaseChangeLog:
+  - changeSet:
+      id: 67e7cf97-ebdc-4439-9a65-c2853b435c98
+      author: raphael-koszalka
+      changes:
+        - createTable:
+            tableName: transactions
+            columns:
+              - column:
+                  name: nsu
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: value
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: card_flag
+                  type: varchar(300)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: modality
+                  type: varchar(300)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: hour
+                  type: datetime
+                  constraints:
+                    nullable: false
+        - createSequence:
+            incrementBy: 1
+            schemaName: public
+            sequenceName: short_sequence
+            startValue: 1
