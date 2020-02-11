@@ -10,6 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 public interface PaymentGatewayAPI {
 
     @RequestMapping(path = "/gateway", method = RequestMethod.GET)
-    ResponseEntity<Object> test(HttpServletResponse response);
+    ResponseEntity<String> test(HttpServletResponse response);
 
 }

@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 public class PaymentGatewayController implements PaymentGatewayAPI {
 
     @Override
-    public ResponseEntity<Object> test(HttpServletResponse response) {
-        return new ResponseEntity<>(response, HttpStatus.OK);
+    public ResponseEntity<String> test(HttpServletResponse response) {
+        return new ResponseEntity<String>("Hallo, wie gehts?", HttpStatus.OK);
     }
 
 }
