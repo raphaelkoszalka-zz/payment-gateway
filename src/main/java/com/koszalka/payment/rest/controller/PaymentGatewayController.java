@@ -12,6 +12,7 @@ public class PaymentGatewayController implements PaymentGatewayAPI {
 
     @Override
     public ResponseEntity<String> test(HttpServletResponse response) {
+
         return new ResponseEntity<String>("Hallo, wie gehts?", HttpStatus.OK);
     }
 
